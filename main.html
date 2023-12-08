@@ -19,16 +19,22 @@
   }
   .header-left {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Change to row to align image and text horizontally */
+    align-items: center;
   }
   .header-left img {
     width: 100px; /* Adjust as per your image's aspect ratio */
+    margin-right: 15px; /* Add some space between the image and the text */
   }
-  .header-left .main-title {
+  .text-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .text-container .main-title {
     font-size: 24px;
     font-weight: bold;
   }
-  .header-left .sub-title {
+  .text-container .sub-title {
     font-size: 18px;
   }
   .header-right {
@@ -41,7 +47,6 @@
     border: 1px solid #666;
     background: #555;
   }
-
   .statement-section {
     position: relative;
     width: 100%;
@@ -73,6 +78,7 @@
   .overlay-text p {
     font-size: 16px;
   }
+
 </style>
 </head>
 <body>
@@ -80,8 +86,10 @@
 <div class="header">
   <div class="header-left">
     <img src="images/image_orb.png" alt="Profile Image">
-    <span class="main-title">Personal Page</span>
-    <span class="sub-title">George Mzhavanadze</span>
+    <div class="text-container">
+      <span class="main-title">Personal Page</span>
+      <span class="sub-title">George Mzhavanadze</span>
+    </div>
   </div>
   <div class="header-right">
     <div class="box">Researches</div>
